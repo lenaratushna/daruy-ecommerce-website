@@ -1,0 +1,28 @@
+@import "reset";
+
+$primaryColor: #abd4e9;
+$bgColor: #F9F1E7;
+$primaryTextColor: #3A3A3A;
+$secondaryTextColor: #898989;
+
+$maxWidth: 1440;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    @include adaptiv-font(16, 14);
+    color: $primaryTextColor;
+}
+
+.container{
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@import "header";
