@@ -1,0 +1,143 @@
+.footer-title {
+    @include adaptiv-font(22, 18);
+    color: #000;
+    font-weight: 700;
+}
+
+.footer {
+    &__body {
+        border-top: 1px solid $secondaryTextColor;
+        display: grid;
+        grid-template-columns: 250px 1fr 290px;
+        padding: 80px 0 60px 0;
+        column-gap: 80px;
+        @media (max-width: 767px) {
+            padding: 50px 0 30px 0;
+        }
+        @media (max-width: 1200px) {
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 290px;
+        }
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 1200px) {
+            grid-column: span 2;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 1em;
+    }
+
+    &__text {
+        line-height: 150%;
+        margin-bottom: 1em;
+    }
+
+    &__menu {
+        @media (max-width: 992px) {
+            margin-bottom: 1.5em;
+        }
+    }
+
+}
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        color: $secondaryTextColor;
+        line-height: 150%;
+        transition: color 0.3s ease 0s;
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5em;
+            @media (max-width: 767px) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 0.5em;
+        }
+        &:hover, &:focus, &:active {
+            color: $primaryTextColor;
+        }
+    }
+}
+.menu-footer {
+    display: flex;
+    justify-content: center;
+    &__column {
+        flex: 0 1 50%;
+    }
+
+    &__title {
+        margin-bottom: 1em;
+    }
+
+    &__list {
+        li{
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+
+    &__link {
+        color: $primaryTextColor;
+        line-height: 150%;
+        &:hover, &:focus, &:active {
+            border-bottom: 1px dotted #000;
+        }
+    }
+}
+.subscribe {
+
+    &__title {
+        margin-bottom: 1em;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__button {
+        flex: 0 0 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primaryColor;
+        img{
+            width: 22px;
+            height: 22px;
+            transition: all 0.3s ease;
+            @media (max-width: 767px) {
+                width: 18px;
+                height: 18px;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__input {
+       width: 100%;
+       padding: 0 12px;
+       background-color: #F4F5F7;
+       font-size: 16px;
+    }
+}
