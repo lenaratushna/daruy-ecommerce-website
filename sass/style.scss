@@ -19,12 +19,26 @@ body{
     color: $primaryTextColor;
 }
 
+.page{
+    flex: 1 1 auto;
+}
+
 .container{
     max-width: 1270px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 15px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+
 @import "header";
+@import "main-slider";
 
 @import "footer";
