@@ -33,6 +33,9 @@
 
     &__content {
         flex: 0 0 40%;
+        @media (max-width: 991px) {
+            margin-top: 20px;
+        }
     }
 
     &__slider {
@@ -41,8 +44,9 @@
         @media (min-width: 992px) {
             padding-left: 32px;
         }
+        position: relative;
         @media (max-width: 991px) {
-            margin-top: 30px;
+            margin-top: 20px;
         }
     }
 }
@@ -89,9 +93,8 @@
     }
 
     &__body {
-
         overflow: hidden;
-        width: 700px;
+        width: 51vw;
         @media (max-width: 991px) {
             width: 100%;
         }
@@ -142,6 +145,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 991px) {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .carousel-indicators {
